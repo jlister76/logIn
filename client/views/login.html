@@ -10,6 +10,7 @@
         <label for="password">Password</label>
         <input type="password" ng-model="user.password" id="password">
       </md-input-container>
+      <span ng-show="err" style="color: coral">Invalid Username and/or password. Please try again.</span>
       <div>
         <md-button type="submit">Log In</md-button>
       </div>
