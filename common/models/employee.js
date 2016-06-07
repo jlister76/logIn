@@ -20,29 +20,26 @@ module.exports = function(Employee) {
       returns: {arg: 'OSystem', type: 'object'}
     });
 
-  /*function getDirectories(){
-    var p = 'updates';
-   fs.readdir(p, function(err,files){
-     if (err) {throw err;}
-     files.map(function (file) {
-       return path.join(p, file);
-     }).forEach(function (file) {
-       console.log(file, path.extname(file));
-     });
-     return files;
-   })
-  }
+
   Employee.dir = function (cb) {
       var dir = getDirectories();
-    //code goes here
-    console.error(dir);
-    cb(null, dir);
+   var p = 'updates';
+   fs.readdir(p, function(err,files){
+   if (err) {throw err;}
+   files.map(function (file) {
+   return path.join(p, file);
+   }).forEach(function (file) {
+   console.log(file, path.extname(file));
+   });
+   cb(null, files);
+   })
+
   };
 
   Employee.remoteMethod('dir',
     {
       http: {path: '/dir', verb:'get'},
       returns: {arg: 'Dirs', type: 'Array'}
-    });*/
+    });
 
 };
