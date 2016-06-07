@@ -56,6 +56,12 @@
       "principalId": "$everyone",
       "permission": "ALLOW",
       "property": "dir"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
     }
   ],
   "methods": {}

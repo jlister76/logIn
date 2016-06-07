@@ -22,7 +22,7 @@ module.exports = function(Employee) {
 
 
   Employee.dir = function (cb) {
-      var dir = getDirectories();
+
    var p = 'updates';
    fs.readdir(p, function(err,files){
    if (err) {throw err;}
