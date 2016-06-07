@@ -32,7 +32,7 @@
           controller: 'AuthLogoutController',
           authenticate: true
         });
-      $urlRouterProvider.otherwise('/main');
+      $urlRouterProvider.otherwise('main');
 
       $httpProvider.interceptors.push(function ($q, $location, LoopBackAuth) {
         return {
