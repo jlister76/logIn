@@ -12,18 +12,26 @@
 
       $scope.login = function () {
         AuthService.login($scope.user.email, $scope.user.password)
-          .catch(function(e){
-            if (e) {
-              console.error(e);
-              $scope.err = e;
-            }
-          })
           .then(function () {
-
+          //remembers path and returns to path after sign in
             var next = $location.nextAfterLogin || '/';
             $location.nextAfterLogin = null;
             $location.path(next);
-            $state.go('main');
+
+            //store user in local storage or session storage
+            //sessionStorage.setItem('key', 'value')
+            //     OR
+            //localStorage.setItem('key', 'value')
+            //Route to main state
+            $state.go('main'); //After login error this state transition ensures login() runs on first click
+
+          })
+          .catch(function(e){
+            if (e) {
+              console.error(e);
+              //Display error on login
+              $scope.err = e;
+            }
           })
       };
     })
@@ -31,6 +39,11 @@
 
       AuthService.logout()
         .then(function () {
+          //clear values in Webstorage
+          //sessionStorage.clear();
+          //     OR
+          //localStorage.clear();
+
           $state.go('login');
         });
     })

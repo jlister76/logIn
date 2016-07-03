@@ -11,6 +11,7 @@
           .$promise
           .then(function (user) {
             //console.info(user);
+            //sets currentUser
             $rootScope.currentUser = user;
 
           });
