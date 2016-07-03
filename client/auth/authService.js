@@ -3,9 +3,9 @@
 
   angular
     .module('logInApp')
-    .factory('AuthService', function (Employee, $q, $rootScope) {
+    .factory('AuthService', function (User, $q, $rootScope) {
       function login(email, password) {
-        return Employee
+        return User
           .login({email: email, password: password})
           .$promise
           .then(function (response) {
@@ -19,7 +19,7 @@
       }
 
       function logout() {
-        return Employee
+        return User
           .logout()
           .$promise
           .then(function () {
@@ -29,7 +29,7 @@
       }
 
       function register(email, password) {
-        return Employee
+        return User
           .create({
             email: email,
             password: password
@@ -38,18 +38,18 @@
       }
 
       function getCurrent() {
-        return Employee
+        return User
           .getCurrent()
       }
 
       function getCurrentId() {
-        return Employee
+        return User
           .getCurrentId()
 
       }
 
       function isAuthenticated() {
-        return Employee.isAuthenticated;
+        return User.isAuthenticated;
       }
 
 

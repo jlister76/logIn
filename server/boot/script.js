@@ -6,7 +6,7 @@ module.exports = function(app){
   var RoleMapping = app.models.RoleMapping;
 
 
-  /*User.create([
+  User.create([
     {username: 'John', email: 'john@email.com', password: "01234HCI"},
     {username: 'IT', email: 'it@email.com', password: "01234HCI"}
   ], function(err, users){
@@ -27,7 +27,7 @@ module.exports = function(app){
         console.error(principal);
       });
     });
-  });*/
+  });
 };
 
 

@@ -1,22 +1,25 @@
-<div layout layout-align="center center">
-  <form layout layout-align="center center"   name="loginForm" ng-submit="login()">
-    <div layout="column" layout-align="center center" class="md-padding" style="border: solid thin rgb(230, 230, 230); width:600px;">
-      <legend>Credentials</legend>
-      <md-input-container>
-        <label for="email">Email</label>
-        <input type="email" ng-model="user.email" id="email">
-      </md-input-container>
-      <md-input-container>
-        <label for="password">Password</label>
-        <input type="password" ng-model="user.password" id="password">
-      </md-input-container>
-      <span ng-show="err" style="color: coral">Invalid Username and/or password. Please try again.</span>
-      <div>
-        <md-button type="submit">Log In</md-button>
+<div flex layout="column" layout-align="center center" class="md-padding">
+  <div layout layout-align="center center">
+    <form layout layout-align="center center"   name="loginForm" ng-submit="login()">
+      <div layout="column" layout-align="center center" class="md-padding" style="border: solid thin rgb(230, 230, 230); width:600px;">
+        <legend>Credentials</legend>
+        <md-input-container>
+          <label for="email">Email</label>
+          <input type="email" ng-model="user.email" id="email">
+        </md-input-container>
+        <md-input-container>
+          <label for="password">Password</label>
+          <input type="password" ng-model="user.password" id="password">
+        </md-input-container>
+        <span ng-show="err" style="color: coral">Invalid Username and/or password. Please try again.</span>
+        <div>
+          <md-button type="submit">Log In</md-button>
+        </div>
+
       </div>
 
-    </div>
 
-
-  </form>
+    </form>
+  </div>
 </div>
+
